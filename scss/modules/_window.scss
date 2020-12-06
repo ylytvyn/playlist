@@ -1,0 +1,34 @@
+.window {
+    @include size(100%);
+    @include pos($t: 0, $l: 0);
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all .3s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal {
+    @include size(70%, auto);
+    position: relative;
+    margin: -500px auto;
+    padding: 20px 20px 0;
+    color: #fff;
+    transition: all .5s;
+    background: rgb(123,138,245);
+    background: linear-gradient(180deg, rgba(123,138,245,1) 0%, rgba(75,88,234,1) 100%);
+
+    .show & {
+        margin-top: 50px;
+    }
+
+    h2 {
+        font: 25px $title;
+        margin-bottom: 15px;
+    }
+}

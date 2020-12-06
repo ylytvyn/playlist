@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Starter">
+	<meta name="author" content="Admin">
+	<title>Music Playlist</title>
+
+	<link rel="icon" href="images/favicon.ico">
+
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<div class="container">
+		<h1>Music Player</h1>
+		<svg class="icon add">
+			<use xlink:href="images/sprite.svg#add-button"></use>
+		</svg>
+
+		<!-- DIV for cloning -->
+		<div class="btns">
+			<svg class="icon play">
+				<use xlink:href="images/sprite.svg#play-button"></use>
+			</svg>
+			<svg class="icon stop">
+				<use xlink:href="images/sprite.svg#stop-button"></use>
+			</svg>
+			
+			<svg class="icon edit">
+				<use xlink:href="images/sprite.svg#edit"></use>
+			</svg>
+			<svg class="icon delete">
+				<use xlink:href="images/sprite.svg#delete"></use>
+			</svg>
+		</div>
+		<!-- DIV for cloning -->
+
+		<ul class="music-container">
+			
+		</ul>
+
+		<div class="window">
+			<div class="modal">
+				<h2>Add/Edit New Song</h2>
+				<svg class="icon close">
+					<use xlink:href="images/sprite.svg#delete"></use>
+				</svg>
+				<form action="#" name="updateForm">
+					<div class="field">
+						<label for="title">Title</label>
+						<input type="text" id="title">
+					</div>
+					<div class="field">
+						<label for="author">Author</label>
+						<input type="text" id="author">
+					</div>
+					<button type="button" class="save">Save</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/main.js"></script>
+</body>
+</html>

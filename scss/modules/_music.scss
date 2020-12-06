@@ -1,0 +1,81 @@
+.music-container {
+    counter-reset: list;
+    overflow-y: auto;
+    height: calc(100% - 75px);
+    padding-right: 20px;
+    margin-right: -15px;
+
+    li {
+        font-size: 17px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 10px;
+
+        &::before {
+            @include pos($t: 1px);
+            content: counter(list) '. ';
+            counter-increment: list;
+        }
+
+        span {
+            font: 20px $title;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .info {
+            margin-left: 20px;
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.btns {
+    display: none;
+}
+
+.icon {
+    @include size(15px);
+    fill: #c2c4f7;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        fill: $pink;
+    }
+
+    &.play,
+    &.stop {
+        @include size(30px);
+        margin-right: 20px;
+    }
+
+    &.stop,
+    &.running {
+        display: none;
+    }
+
+    &.running + &.stop {
+        display: block;
+    }
+
+    &.add {
+        @include size(30px);
+        @include pos($t: 25px, $r: 15px);
+    }
+
+    &.close {
+        @include pos($t: 30px, $r: 20px);
+    }
+}
