@@ -222,9 +222,10 @@ function playSong(item, btn) {
 		let url = item.song.toLowerCase().split(' ').join('-');
 		
 		CURRENT_AUDIO = new Audio(`media/${url}.mp3`);
-		
+		CURRENT_AUDIO.load();
 		CURRENT_AUDIO.volume = .5;
 		CURRENT_AUDIO.play();
+		
 		audioInProgress = true;
 		btn.classList.add('running');
 	}
