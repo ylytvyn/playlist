@@ -219,8 +219,8 @@ function deleteSong(item) {
 // Play Song 
 function playSong(item, btn) {
 	if (!audioInProgress) {
-		let url = item.song.toLowerCase().split(' ').join('_');
-
+		let url = item.song.toLowerCase().split(' ').join('-');
+		
 		CURRENT_AUDIO = new Audio(`media/${url}.mp3`);
 		
 		CURRENT_AUDIO.volume = .5;

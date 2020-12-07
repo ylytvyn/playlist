@@ -20,12 +20,15 @@ body, html {
 
 body {
 	background-color: $blue;
-	position: relative;
 	font: 500 16px $font;
 	color: #c2c4f7;
 	overflow: hidden;
-	min-width: 500px;
-	max-width: 1024px;
+}
+
+.container {
+	@include size(500px, 80vh);
+	margin: 10vh auto;
+	position: relative;
 
 	&::before {
 		@include size(700px);
@@ -45,17 +48,15 @@ body {
 	}
 }
 
-.container {
-	@include size(500px, 80vh);
+.wrapper {
+	position: relative;
+	z-index: 1;
 	border: 15px solid $blue;
 	background-color: $blue;
 	border-top-width: 30px;
 	border-bottom-width: 30px;
 	padding: 15px;
 	border-radius: 20px;
-	margin: 10vh auto;
-	position: relative;
-	z-index: 1;
 	box-shadow: 0 0 15px 0 rgba(16, 16, 60, 1),
 				inset 0 0 10px 0 rgba(16, 16, 60, .8);
 }
